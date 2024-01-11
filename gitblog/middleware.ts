@@ -6,7 +6,7 @@ import { authMiddleware } from "@clerk/nextjs";
 export default authMiddleware({
 
    // 해당 경로를 인증하지 않고 통과시킴
-    publicRoutes:['/users']
+    publicRoutes:['/api/webhooks(.*)']
 });
  
 export const config = {

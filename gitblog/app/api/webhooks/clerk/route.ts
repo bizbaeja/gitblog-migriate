@@ -8,28 +8,28 @@ export async function POST(req: Request) {
   if (!WEBHOOK_SECRET) {
     throw new Error('WEBHOOK_SECRET을 .env.local에 설정해주세요.')
   }
-    // Get the headers
+    // headers 를 가져옴
     const headerPayload = headers();
     const svix_id = headerPayload.get("svix-id");
     const svix_timestamp = headerPayload.get("svix-timestamp");
     const svix_signature = headerPayload.get("svix-signature"); 
 
-    // If there are no headers, error out
+    // headers 가 없으면 에러를 던짐
     if (!svix_id || !svix_timestamp || !svix_signature) {
       return new Response('에러가 발생했습니다, -- svix 헤더에 문제가 있습니다.', {
         status: 400
       })
     }
-        // Get the body
+        // body 를 가져옴
     const payload = await req.json()
     const body = JSON.stringify(payload);
 
-    // Create a new Svix instance with your secret.
+    // 새로운 svix
     const wh = new Webhook(WEBHOOK_SECRET);
 
     let evt: WebhookEvent
 
-    // Verify the payload with the headers
+    // headers 와 body 를 검증함
   try {
     evt = wh.verify(body, {
       "svix-id": svix_id,
@@ -42,13 +42,9 @@ export async function POST(req: Request) {
       status: 400
     })
   }
-   // Get the ID and type
+   // ID 와 type 을 가져옴
    const { id } = evt.data;
-   const eventType = evt.type;
-
-   console.log(`Webhook with and ID of ${id} and type of ${eventType}`)
-   console.log('Webhook body:', body)
-
+  
    return new Response('', { status: 200 })
 
 }
