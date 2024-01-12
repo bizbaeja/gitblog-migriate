@@ -13,21 +13,19 @@ export const Logo = () =>{
         <div className='flex flex-col items-center gap-y-4'>
             <div className='bg-white rounded-full p-1'>
                 <Image
-                 src='/seaotter.jpeg'
-                 width={80} 
-                 height={80}
-                alt='Gaemehub'/>
+                 src='/pencil.svg'
+                 width={40} 
+                 height={40}
+                alt='blog'/>
             </div>
             <div className='flex flex-col items-center'>
                 <p className={cn(
                     "text-xl font-semibold",
                     font.className
                 )}>
-                    Hello
+                   Blog
                 </p>
-                <p className={cn("text-sm text-muted-foreground",font.className)}>
-                    Let&apos;s Play
-                </p>
+              
             </div>
         </div>
         </Link>

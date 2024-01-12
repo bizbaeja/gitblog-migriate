@@ -4,7 +4,7 @@ import {
     UserButton} from "@clerk/nextjs"
 import { Button } from "@/components/ui/buttons"
 import Link from "next/link"
-import { Clapperboard } from "lucide-react";
+
 
 export const Actions = async () => {
     const user = await currentUser();
@@ -28,18 +28,14 @@ export const Actions = async () => {
                         className="text-muted-foreground hover:text-primary"
                         asChild
                     >
-                        <Link href={`/u/${user.username}`}>
-                            <Clapperboard 
-                                className="h-5 w-5 lg:mr-2"
-                            />
+                        <Link href={`/u/${user.username}}`}>
+                           
                             <span className="hidden lg:block">
-                                Dashboard
+                                포트폴리오
                             </span>
                         </Link>
                     </Button>
-                    <UserButton 
-                     afterSignOutUrl="/"
-                    />
+                 
                 </div>
             )}
         </div>
