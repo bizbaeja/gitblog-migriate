@@ -12,7 +12,7 @@ const Page = ({ name, src, desc }: PortfolioPageProps) => {
     return (
         <div>
             <Portfolio 
-                src={src}
+                src={[src]}
                 name={name}
                 desc={desc}
             />
