@@ -1,75 +1,28 @@
 
 import data from "@/data.json"
-import React, { useEffect, useState } from 'react';
+import type { NextPage } from "next";
+import Carousel from "@/components/carousel";
 import  Link from "next/link";
-interface PortfolioProps {
-    name: string;
-    src: string[];
-    desc: string;
-    };
+import Image from "next/image";
 
-    const Portfolio: React.FC<PortfolioProps>=({name,src,desc}: PortfolioProps) => {
-    
-
+const Portfolio: NextPage = () => {
     return (
-        <>
-        <div className=" pt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2lx:grid-cols-5 gap-4">
-            
-            <div>
-                <img className="rounded-md " width="500px" height="400px" src={data[0].src}/> 
-                <Link className="hover:text-green-500" href={data[0].link}>
-                    <p className="text-xl font-bold text-center">
-                        {data[0].name}
-                    </p>
-                </Link>
-                <p className="text-muted-foreground text-center">
-                    {data[0].desc}
-                </p>
+      <div className="lg:w-3/4 mx-auto my-2">
+        <Carousel>
+          {data.map((data, i) => (
+            <div className="relative h-96 w-96 flex-[0_0_100%]" key={i}>
+              <Link href={data.link}>
+                <Image alt="alt" fill className="h-full w-full object-cover opacity-35" src={data.src} />
+              <div className="hover:text-green-400 absolute inset-0 flex flex-col justify-center items-center">
+                <h2 className="text-xl font-bold text-center">{data.name}</h2>
+                <p className="text-muted-foreground text-center">{data.desc}</p>
+              </div>
+              </Link>
             </div>
-              
-              <div>
-              <embed className="rounded-md"src={data[2].src} width="500px" height="400px" />
-              <Link className="hover:text-green-500"href={data[2].link}>
-              <p className="text-xl font-bold text-center">
-                    {data[2].name}
-                </p>
-              </Link>
-            
-                <p className="text-muted-foreground text-center">
-                    {data[2].desc}
-                </p>
-              </div>
-              
-              <div>
-         
-              <img className="rounded-md h-full w-full" width="500px" height="400px" src={data[1].src}/>
-              <Link className="hover:text-green-500" href={data[1].link}>
-              <p className="text-xl font-bold text-center">
-                        {data[1].name}
-                    </p>
-              </Link>
-            
-                    <p className="text-muted-foreground text-center">
-                        {data[1].desc}
-                    </p>
-              </div>
-              <div>
-              <img className="rounded-xl" width="600px" height="400px" src={data[3].src}/>
-                <Link className="hover:text-green-500" href={data[3].link}>
-                    <p className="text-xl font-bold text-center">
-                        {data[3].name}
-                    </p>
-                </Link>
-              
-                    <p className="text-muted-foreground text-center">
-                        {data[3].desc}
-                    </p>
-              </div>
-        </div>
-
-        </>
-        
+          ))}
+        </Carousel>
+      </div>
     );
-}
+  };
 
 export default Portfolio

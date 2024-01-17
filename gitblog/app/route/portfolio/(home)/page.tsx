@@ -10,11 +10,9 @@ interface PortfolioPageProps {
 
 const Page = ({ name, src, desc }: PortfolioPageProps) => {
     return (
-        <div>
+        <div >
             <Portfolio 
-                src={[src]}
-                name={name}
-                desc={desc}
+             
             />
         </div>
     );

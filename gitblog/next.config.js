@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = { reactStrictMode: true,
+    swcMinify: true,
     images:{
-        domains:[
-            "utfs.io",
-        ],
+        domains: ["vercel.app"],
         remotePatterns:[
             {
                 protocol: 'https',

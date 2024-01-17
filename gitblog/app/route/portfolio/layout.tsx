@@ -13,7 +13,7 @@ const CreatorLayout = ({
     return (
       <>
       <NavBar />
-      <div className="flex  h-full pt-20">
+      <div className="mt-10 mb-10 flex justify-center pt-20">
       {children}
       </div>
       </>
