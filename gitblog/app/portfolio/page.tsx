@@ -4,9 +4,11 @@ import type { NextPage } from "next";
 import Carousel from "@/components/carousel";
 import  Link from "next/link";
 import Image from "next/image";
-
+import Page from "./_components/swiper"
 const Portfolio: NextPage = () => {
     return (
+      <>
+      <Page />
       <div className="lg:w-3/4 mx-auto my-2">
         <Carousel >
           {data.map((data, i) => (
@@ -29,6 +31,8 @@ const Portfolio: NextPage = () => {
           ))}
         </Carousel>
       </div>
+      </>
+      
     );
   };
 

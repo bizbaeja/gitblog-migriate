@@ -51,11 +51,11 @@ export const About = () => {
   return (
     <>
       <div id="slider">
-        <div className="span mr-10">배자현</div>
-        <div className="span" id="sliderValue"></div>
+        <div className="span mr-10 font-['KimjungchulMyungjo-Bold']">배자현</div>
+        <div className="span font-['KimjungchulMyungjo-Bold'" id="sliderValue"></div>
       </div>
 
-      <div className="youtube">youtube.com/@AdamCurzonDev</div>
+   
     </>
   );
 };

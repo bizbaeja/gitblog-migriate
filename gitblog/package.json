@@ -31,8 +31,10 @@
     "react-dom": "^18",
     "shadcn-ui": "^0.6.0",
     "svix": "^1.15.0",
+    "swiper": "^11.0.5",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsparticles": "^3.1.0",
     "typescript-cookie": "^1.0.6"
   },
   "devDependencies": {
