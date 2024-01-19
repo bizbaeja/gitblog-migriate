@@ -21,12 +21,12 @@ export const Actions = async () => {
                         className="text-xl font-bold hover:text-primary"
                         asChild
                     >
-                        <Link href={`/route/about`}>
+                       <a href="/about">
                            
                             <span className="hidden lg:block">
                             about
                             </span>
-                        </Link>
+                        </a>
                     </Button>
                  
                 </div>
@@ -37,7 +37,7 @@ export const Actions = async () => {
                         className="text-xl font-bold hover:text-primary m-5"
                         asChild
                     >
-                        <Link href={`/route/portfolio`}>
+                        <Link href={`/portfolio`}>
                            
                             <span className="hidden lg:block">
                                 포트폴리오
@@ -54,7 +54,7 @@ export const Actions = async () => {
                         className="text-xl font-bold hover:text-primary m-5"
                         asChild
                     >
-                        <Link href={`/route/contact`}>
+                        <Link href={`/contact`}>
                            
                             <span className="hidden lg:block">
                             Contact

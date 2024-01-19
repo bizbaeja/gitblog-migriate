@@ -8,7 +8,7 @@ import Image from "next/image";
 const Portfolio: NextPage = () => {
     return (
       <div className="lg:w-3/4 mx-auto my-2">
-        <Carousel>
+        <Carousel >
           {data.map((data, i) => (
             <div className="relative h-96 w-96 flex-[0_0_100%]" key={i}>
                 <Image alt="alt" fill className="h-full w-full object-cover opacity-35" src={data.src} />
