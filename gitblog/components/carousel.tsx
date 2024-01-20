@@ -32,7 +32,7 @@ const Carousel = ({ children, ...options }: Props) => {
       {/* 3. The inner div must have a display:flex property */}
       {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
       <div className="flex h-full">{children}</div>
-      <Dots itemsLength={length} selectedIndex={selectedIndex} />
+      {/* <Dots itemsLength={length} selectedIndex={selectedIndex} /> */}
       <CarouselControls
         canScrollPrev={canScrollPrev}
         canScrollNext={canScrollNext}
