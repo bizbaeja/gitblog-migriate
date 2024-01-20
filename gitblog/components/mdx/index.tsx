@@ -20,7 +20,11 @@ export default function MDXLayout({ children }:MDXProps) {
         {`
           .markdown-body{
             padding: 20px;
+            background-color: rgb(255, 255, 255, 0.3);
           }
+            .markdown-body :global(h1){
+                font-size: 2.25rem;
+            }
         `}
       </style>
       <MDXProvider components={components as MDXComponents}>

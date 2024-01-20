@@ -7,19 +7,23 @@ interface CodeBlockProps {
   className: string;
 }
 
-export default ({ children, className }: CodeBlockProps) => {
-  const language = (className ?? '').toLowerCase();
 
+export default ({ children, className }: CodeBlockProps ) => {
+  const language = (className ?? '').toLowerCase();
+  var theme = themes.oceanicNext;
   return (
     <Highlight
-      theme={themes.duotoneDark} // Specify the theme directly from `themes`
+      theme={theme}
+      
       code={children}
       language={language as Language}
+      
     >
+    
       {({
         className, style, tokens, getLineProps, getTokenProps,
       }) => (
-        <pre className={className} style={{ ...style }}>
+        <pre className={className} style={{ ...style}}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
