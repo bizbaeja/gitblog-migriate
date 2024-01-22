@@ -26,12 +26,13 @@ const Carousel = ({ children, ...options }: Props) => {
     };
   }, [emblaApi]);
   return (
+
     // Attach ref to a div
     // 2. The wrapper div must have overflow:hidden
-    <div className="overflow-hidden" ref={emblaRef}>
+    <div className="overflow-hidden " ref={emblaRef}>
       {/* 3. The inner div must have a display:flex property */}
       {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
-      <div className="flex h-full">{children}</div>
+      <div className="aspect-video w-full flex  items-center h-full ">{children}</div>
       {/* <Dots itemsLength={length} selectedIndex={selectedIndex} /> */}
       <CarouselControls
         canScrollPrev={canScrollPrev}

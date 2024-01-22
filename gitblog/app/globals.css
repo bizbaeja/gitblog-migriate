@@ -9,6 +9,9 @@
 }
 html,
 body,
+h1{
+  font-size: x-large;
+}
 :root {
   height: 100%;
   @apply bg-neutral-900/80;

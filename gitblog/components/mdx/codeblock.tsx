@@ -23,7 +23,7 @@ export default ({ children, className }: CodeBlockProps ) => {
       {({
         className, style, tokens, getLineProps, getTokenProps,
       }) => (
-        <pre className={className} style={{ ...style}}>
+        <pre className={className} style={{ ...style,width:"fit-content",display:"inline-block" , margin:"0 auto"}}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
