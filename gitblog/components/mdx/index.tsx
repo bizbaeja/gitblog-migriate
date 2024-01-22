@@ -25,11 +25,13 @@ export default function MDXLayout({ children }:MDXProps) {
             line-height: 2.5;
             aside{
                 color: #00d4ff;
-                
+            font-family:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.8rem;   
             }
            pre[class *="prism-code"]{
             padding:5px !important;
             margin-bottom: -7px !important;
+       
        
            }
         
