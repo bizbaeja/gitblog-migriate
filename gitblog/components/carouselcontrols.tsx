@@ -1,14 +1,23 @@
 import classNames from "classnames";
-
+import { useState } from "react";
 type Props = {
   canScrollPrev: boolean;
   canScrollNext: boolean;
   onPrev(): void;
   onNext(): void;
 };
+const [currentMDX, setCurrentMDX] = useState(0);
+
+const handlePrev = () => {
+  setCurrentMDX((nextMDX) => (nextMDX + 1) % 4); // 4는 MDX 컴포넌트의 총 개수
+};
+  const handleNext = () => {
+  setCurrentMDX((prevMDX) => (prevMDX + 1) % 4); // 4는 MDX 컴포넌트의 총 개수
+};
+
 const CarouselControls = (props: Props) => {
   return (
-    <div className="flex justify-end gap-2 ">
+    <div className="flex justify-center gap-5 ">
       <button
         onClick={() => {
           if (props.canScrollPrev) {
@@ -17,9 +26,10 @@ const CarouselControls = (props: Props) => {
         }}
         disabled={!props.canScrollPrev}
         className={classNames({
-          "px-4 py-2 text-white rounded-md": true,
-          "bg-indigo-200": !props.canScrollPrev,
-          "bg-indigo-400": props.canScrollPrev,
+          "px-3 py-1 mt-3 text-white rounded-md": true,
+          "hover:bg-rose-300": true ,
+          "variant":"ghost"
+           
         })}
       >
         Prev
@@ -32,9 +42,10 @@ const CarouselControls = (props: Props) => {
         }}
         disabled={!props.canScrollNext}
         className={classNames({
-          "px-4 py-2 text-white rounded-md": true,
-          "bg-indigo-200": !props.canScrollNext,
-          "bg-indigo-400": props.canScrollNext,
+          "px-3 py-1 mt-3 text-white rounded-md": true,
+          "variant":"ghost",
+          "hover:bg-rose-300": true,
+  
         })}
       >
         Next

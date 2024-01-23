@@ -34,12 +34,12 @@ const Carousel = ({ children, ...options }: Props) => {
       {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
       <div className="aspect-video w-full flex  items-center h-full ">{children}</div>
       {/* <Dots itemsLength={length} selectedIndex={selectedIndex} /> */}
-      <CarouselControls
+      {/* <CarouselControls
         canScrollPrev={canScrollPrev}
         canScrollNext={canScrollNext}
         onPrev={() => emblaApi?.scrollPrev()}
         onNext={() => emblaApi?.scrollNext()}
-        />
+        /> */}
     </div>
   );
 };

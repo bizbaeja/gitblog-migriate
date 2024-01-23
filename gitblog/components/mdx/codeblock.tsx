@@ -16,7 +16,7 @@ export default ({ children, className }: CodeBlockProps) => {
 
   // Decide whether to show backticks based on code length
   const showBackticks = codeContent.split('\n').length > 1;
-
+  ;
   return (
     <Highlight
       theme={theme}
@@ -26,12 +26,13 @@ export default ({ children, className }: CodeBlockProps) => {
       {({
         className, style, tokens, getLineProps, getTokenProps,
       }) => (
-        <pre className={className} style={{ ...style, width: "fit-content", display: "inline-block", margin: "0 auto", whiteSpace: "pre-wrap" }}>
+        <pre className={className} style={{ ...style, width: "fit-content", display: "inline-block", margin: "0 auto", whiteSpace: "pre-wrap"  }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
-                <span style={{ fontFamily: "Melno" }} key={key} {...getTokenProps({ token, key })}>
+                <span style={{ fontFamily: "Melno" }} key={key} {...getTokenProps({ token, key }) }>
                     {showBackticks ? `${token.content}` : `\`${token.content}\``}
+
                 </span>
               ))}
             </div>
