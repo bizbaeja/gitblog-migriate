@@ -44,11 +44,11 @@ return(
       >
       
             {data.map((item, i)=>(
-                  <div className="swiper-wrapper">
+                  <div className="swiper-wrapper"key={i}>
                   <SwiperSlide >
                     <Image src={item.src} key={i} alt="data"/>
                    
-                     <div className="overlay">
+                     <div className="overlay" >
                         <h1>{item.name}</h1>
                         <p>{item.desc}</p>
                         
