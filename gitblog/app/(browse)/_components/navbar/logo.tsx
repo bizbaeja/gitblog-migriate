@@ -11,22 +11,18 @@ export const Logo = () =>{
     return (
         <Link href='/'>
         <div className='flex flex-col items-center gap-y-1 ml-20'>
-            <div className='bg-white rounded-full p-1'>
-                <Image
-                 src='/pencil.svg'
-                 width={40} 
-                 height={40}
-                alt='blog'/>
-            </div>
-            <div className='flex flex-col items-center'>
+          <div className='rounded-lg  border-2 border-white'>
+          <div className='flex flex-col items-center'>
                 <p className={cn(
-                    "text-xl font-semibold",
+                    "text-lg font-semibold p-1",
                     font.className
                 )}>
-                   Blog
+                   Bizbaeja
                 </p>
               
             </div>
+          </div>
+      
         </div>
         </Link>
     )

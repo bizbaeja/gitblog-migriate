@@ -10,6 +10,8 @@ const BrowseLayout = ({
       <NavBar />
       <div className="flex  h-full pt-20">
       {children}
+    
+    
       </div>
       </>
     );

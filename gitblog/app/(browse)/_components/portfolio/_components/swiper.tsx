@@ -1,7 +1,6 @@
 
 "use client"
 import "./style.css"
-import {useEffect} from "react"
 import { EffectCube, Pagination ,Keyboard, Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import data from "@/data.json"
@@ -16,15 +15,8 @@ return(
 
     <section>
       <div className="content">
-        <h1>포트폴리오를 소개합니다</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatibus, quos quibusdam, quas voluptatem doloremque, voluptatum
-            asperiores quia dolores dignissimos dolorum. Quisquam voluptatibus,
-            quos quibusdam, quas voluptatem doloremque, voluptatum asperiores
-            quia dolores dignissimos dolorum.
-        </p>
-        <button>Explore Tours</button>
+        <h1>포트폴리오를 <br/>소개합니다</h1>
+
       </div>
 
       <Swiper 
@@ -55,7 +47,7 @@ return(
                   <div className="swiper-wrapper">
                   <SwiperSlide >
                     <img src={item.src} key={i} />
-                    <div className="cost">{item.name}</div>
+                   
                      <div className="overlay">
                         <h1>{item.name}</h1>
                         <p>{item.desc}</p>

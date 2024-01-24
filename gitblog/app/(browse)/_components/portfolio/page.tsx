@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 import data from "@/data.json"
@@ -31,6 +32,7 @@ export function Portfolio(components: MDXComponents,props:Props): React.ReactEle
 
   const [currentMDX, setCurrentMDX] = useState(0);
   const [currentImage, setCurrentImage] = useState(0);
+  
   const handlePrev = () => {
     const newMDX = (currentMDX - 1 + 4) % 4; // 이전 MDX 컴포넌트로 이동
     setCurrentMDX(newMDX);
@@ -76,15 +78,17 @@ export function Portfolio(components: MDXComponents,props:Props): React.ReactEle
                 <h1 className="hover:text-green-400 text-xl font-bold text-center p-6">{item.name}</h1>
               </Link>
               <MDXLayout>
-                {i === currentMDX && renderMDXContent()} // 현재 MDX 컴포넌트만 렌더링
+                {i === currentMDX && renderMDXContent()}
               </MDXLayout>
             </div>
           ))}
         </Carousel>
+        <div className='flex justify-center'>
         <button onClick={handlePrev}  className={classNames({
           "px-3 py-1 mt-3 text-white rounded-md": true,
           "hover:bg-rose-300": true ,
-          "variant":"ghost"
+          "variant":"ghost",
+          
            
         })} >Prev</button> {/* Carousel 외부에 버튼 배치 */}
         <button  onClick={handleNext}  className={classNames({
@@ -93,6 +97,8 @@ export function Portfolio(components: MDXComponents,props:Props): React.ReactEle
           "hover:bg-rose-300": true,
   
         })}>Next</button> {/* Carousel 외부에 버튼 배치 */}
+        </div>
+   
       </div>
 
 

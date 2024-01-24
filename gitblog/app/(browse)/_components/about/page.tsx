@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from "react";
 import "./style.css";
-
+import { IntroductSection } from "./introduce";
 export const About = () => {
   useEffect(() => {
     var sliderCounter = 0;
@@ -54,6 +54,7 @@ export const About = () => {
         <div className="span mr-10 font-['KimjungchulMyungjo-Bold']">배자현</div>
         <div className="span font-['KimjungchulMyungjo-Bold'" id="sliderValue"></div>
       </div>
+        <IntroductSection/>
 
    
     </>
