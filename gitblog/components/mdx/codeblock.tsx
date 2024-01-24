@@ -8,7 +8,7 @@ interface CodeBlockProps {
 }
 
 
-export default ({ children, className }: CodeBlockProps) => {
+export const CodeBlock =  ({ children, className }: CodeBlockProps) => {
   const language = (className ?? '').toLowerCase();
   var theme = themes.oceanicNext;
 

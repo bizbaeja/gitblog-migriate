@@ -29,8 +29,8 @@ export const IntroductSection = () => {
                <div className="">
                  <p className="font-semibold">Channel</p>
                  <ul >
-                    <li>Blog : <Link href="https://gitblog-two.vercel.app/">Bizbaeja's Blog</Link> </li>
-                    <li>GitHub : <Link href="https://github.com/bizbaeja">Bizbaeja's Github</Link> </li>
+                    <li>Blog : <Link href="https://gitblog-two.vercel.app/">Bizbaeja Blog</Link> </li>
+                    <li>GitHub : <Link href="https://github.com/bizbaeja">Bizbaeja Github</Link> </li>
                  </ul>
                </div>
                <div >

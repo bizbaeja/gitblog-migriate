@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import data from "@/data.json"
 import "swiper/swiper-bundle.css"
 import 'swiper/css/effect-cube';
-
+import Image from "next/image";
 export const Page = () => {
 
 
@@ -46,12 +46,12 @@ return(
             {data.map((item, i)=>(
                   <div className="swiper-wrapper">
                   <SwiperSlide >
-                    <img src={item.src} key={i} />
+                    <Image src={item.src} key={i} alt="data"/>
                    
                      <div className="overlay">
                         <h1>{item.name}</h1>
                         <p>{item.desc}</p>
-
+                        
                      </div>
                      </SwiperSlide>
                     </div>

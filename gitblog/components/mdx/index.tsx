@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXComponents } from 'mdx/types';
-import CodeBlock from './codeblock';
+import {CodeBlock} from './codeblock';
 import 'github-markdown-css';
 
 interface MDXProps{

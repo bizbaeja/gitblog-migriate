@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 
 
-export const slide = () => {
+export const useSlide = () => {
 useEffect(()=>{
     var sliderCounter = 0;
     var sliderContent = [
@@ -41,9 +41,9 @@ useEffect(()=>{
       sliderCounter++;
     
     
-    slide();
-    setInterval(slide, 4000);   
+    useSlide();
+    setInterval(useSlide, 4000);   
 },[])
 }
 
-export default slide;
+export default useSlide;
