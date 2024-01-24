@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import Image from "next/image"
 
 export const IntroductSection = () => {
     return(
@@ -52,12 +52,12 @@ export const IntroductSection = () => {
             </div>
             <div className="flex space-x-4">
               {/* 기술 아이콘 */}
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png" className="h-12" alt="HTML5" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/240px-CSS3_logo.svg.png" className="h-12" alt="CSS3" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" className="h-12" alt="JavaScript" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" className="h-12" alt="React" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/440px-Typescript.svg.png" className="h-12" alt="TypeScript" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/240px-Nextjs-logo.svg.png" className="h-6" alt="NextJS" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png" className="h-12" alt="HTML5" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/240px-CSS3_logo.svg.png" className="h-12" alt="CSS3" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" className="h-12" alt="JavaScript" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" className="h-12" alt="React" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/440px-Typescript.svg.png" className="h-12" alt="TypeScript" />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/240px-Nextjs-logo.svg.png" className="h-6" alt="NextJS" />
             </div>
           </div>
         </div>
