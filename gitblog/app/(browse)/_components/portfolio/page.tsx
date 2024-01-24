@@ -25,7 +25,7 @@ type Props = {
 
 export function Portfolio(components: MDXComponents,props:Props): React.ReactElement<any, any> {
   
-  const MDXContent0 = dynamic(() => import(`/mdx/stream.mdx`));
+  const MDXContent0 = dynamic(() => import(`/mdx/stream.md`));
   const MDXContent1 = dynamic(() => import(`/mdx/aljal.md`));
   const MDXContent2 = dynamic(() => import(`/mdx/hitch.md`));
   const MDXContent3 = dynamic(() => import(`/mdx/popify.md`));

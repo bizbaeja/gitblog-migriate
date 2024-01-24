@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { Inter } from "next/font/google"
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import styles from "./contact.module.css";
 import Head from "next/head";

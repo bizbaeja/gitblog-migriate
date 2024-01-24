@@ -7,8 +7,16 @@ import data from "@/data.json"
 import "swiper/swiper-bundle.css"
 import 'swiper/css/effect-cube';
 import Image from "next/image";
+import { Hint } from "@/components/hint"
+import Link from "next/link";
+import { useEffect } from "react";
 export const Page = () => {
-
+  useEffect(() => {
+    console.log(document.location);
+    console.log(window.location.href);
+  }, []);
+  const hover = document.querySelector(".hover");
+  const label = hover ? " 포트폴리오로 이동하기":"포트폴리오로 이동하기";
 
 return(
     <div>
@@ -46,13 +54,13 @@ return(
             {data.map((item, i)=>(
                   <div className="swiper-wrapper"key={i}>
                   <SwiperSlide >
-                    <Image src={item.src} key={i} alt="data"/>
-                   
-                     <div className="overlay" >
-                        <h1>{item.name}</h1>
+                    <Image src={item.src} width={100} height={100} key={i} alt="data"/>
+                   <Hint label={label} side="right" asChild >
+                    <Link  href={item.link}><div className="overlay" >
+                      <h1 className="hover:text-green-400">{item.name}</h1>
                         <p>{item.desc}</p>
                         
-                     </div>
+                     </div></Link></Hint>
                      </SwiperSlide>
                     </div>
                 

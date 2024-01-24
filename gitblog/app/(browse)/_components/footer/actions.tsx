@@ -1,9 +1,8 @@
 
-"use client"
 
 
 
-export const Actions = async () => {
+export const Actions =  () => {
 
        return (
        <>

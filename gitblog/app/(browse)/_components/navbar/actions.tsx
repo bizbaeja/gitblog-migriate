@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/buttons"
 
 
 
-export const Actions = async () => {
+export const Actions =  () => {
     const handleAbout = (e:any) => {
         e.preventDefault();
         const aboutSection = document.getElementById('about');
